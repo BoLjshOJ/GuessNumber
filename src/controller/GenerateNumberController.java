@@ -1,7 +1,5 @@
 package controller;
 
-import model.Game;
-
 import java.util.Random;
 
 public class GenerateNumberController {
