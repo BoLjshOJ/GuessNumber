@@ -6,12 +6,16 @@ import java.util.Random;
 
 public class GenerateNumberController {
 
-    private Random random;
+    private final Random random;
 
-    public int generate(Game game) {
-        final int size = game.getMax() - game.getMin();
+    public GenerateNumberController(Random random) {
+        this.random = random;
+    }
+
+    public int generate(final int min, final int max) {
+        final int size = max - min;
         final int randomValue = random.nextInt() % size;
-        return game.getMin() + randomValue;
+        return min + randomValue;
     }
 
 }
